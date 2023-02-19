@@ -3,6 +3,7 @@ import { ProfileService } from './profile.service';
 import { CertificateService } from './certificate.service';
 import { ExperienceService } from './experience.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +17,7 @@ export class AppComponent {
   constructor(
     private profileService: ProfileService, 
     private certificateService: CertificateService,
-    private experienceService: ExperienceService
+    private experienceService: ExperienceService,
   ) {}
   ngOnInit() {
     this.profile = this.profileService.profileInfoEN;
@@ -24,4 +25,5 @@ export class AppComponent {
     this.experiences = this.experienceService.experienceDE;
   }
 
+      
 }
